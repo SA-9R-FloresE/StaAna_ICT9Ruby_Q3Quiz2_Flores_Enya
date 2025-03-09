@@ -1,0 +1,35 @@
+ summary{
+        background-color: mediumpurple;
+      }  
+   
+      #name{
+        border: 3px solid gray;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      label, p{
+        font-weight: bold;
+        color: white;
+        font-family: Tahoma;
+      }
+      .row{
+        display: flex;
+      }
+      #ticket{
+        width: 400px;
+        height: 200px;
+      }
+      button{
+        font-family: Tahoma;
+        color:rebeccapurple;
+      }
+      body{
+        background-image: url('https://e0.pxfuel.com/wallpapers/358/714/desktop-wallpaper-stefan-iordache-your-desired-developer-to-make-your-perfect-responsive-website-web-programming.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+      }
+      hr{
+        color: white;
+      }

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q3 Quiz2</title>
+    <link href="style.css" rel="stylesheet">
+
+    </head>
+
+<body>
+    <br>
+     <center>
+        <div class="col-md-6" style="background-color: #710ecc; color: white; font-family: Times New Roman;">
+          <script>  
+          document.write("<h1>Ticketing Center</h1>");
+          </script>
+        </div>
+      </center>
+      <hr>
+ 
+     <center>
+        <div class="col-md-6">
+          <details ontoggle="message1()">
+            <summary>
+              <b>Personal Information</b>
+              <br>
+              <i id="message1"></i>
+            </summary>
+
+              <form>
+                  <br>
+                    <label>Complete Name</label> 
+                        <input type="text" id="name" class="form-control" required > 
+                  <br>
+                    <label>Email</label> 
+                        <input type="email" id="name" class="form-control" required> 
+                  <br>     
+               
+                    <button type="button" class="btn btn-info" onclick="info()"> Submit Info</button>
+              </form>
+
+             
+          </details>
+        </div>
+      </center>
+
+      <br>
+
+      <center>
+        <div class="col-md-6">
+          <details ontoggle="message2()">
+            <summary>
+              <b>Ticket Price</b>
+              <br>
+              <i id="message2"></i>
+            </summary>
+
+             <form>
+                  <br>
+                    <label>Choose your seat:</label> 
+                        <select class="form-select" id="seat">
+                            <option value="none">Select</option>
+                            <option value="300">Patron</option>
+                            <option value="200">Lower Box</option>
+                            <option value="100">Upper Box</option>
+                            <option value="60">General Admission</option>
+                        </select>
+                    <br>
+                    <label>Choose an option</label> 
+                        <select class="form-select" id="discount">
+                            <option value="none">Select</option>
+                            <option value="0.4">Student</option>
+                            <option value="0">Regular</option>
+                        </select>
+
+                    <br><br>
+                    <button type="button" class="btn btn-info" onclick="check_discount()"> TICKET PRICE </button>
+              </form>
+          </details>
+        </div>
+      </center>
+
+      <br>
+
+      <center>
+        <div class="col-md-6">
+          <details ontoggle="message3()">
+            <summary>
+              <b>Print Ticket</b>
+              <br>
+              <i id="message3"></i>
+            </summary>
+            <br>
+         
+               <img src="https://ultimatepartysuperstores.com/cdn/shop/files/mayflower-distributing-concessions-purple-double-roll-raffle-tickets-2000ct-41793937244465_600x.jpg?v=1690551171" id="ticket">
+                <button type="button" class="btn btn-info" onclick="print_ticket()"> PRINT TICKET</button>
+           
+              <br><br><br>
+             <a href="index.html"><button type="Submit" class="btn btn-info"> Buy more tickets</button></a>
+          </details>
+        </div>
+        <hr>
+        <p>&copy;Enya Flores</p>
+      </center>
+
+      <br>
+
+      
+
+      <script>
+        
+       function message1(){
+        document.getElementById('message1').innerHTML = "Fill out the form below."; 
+       }
+
+        function message2(){
+        document.getElementById('message2').innerHTML = "Check your ticket price."; 
+       }
+
+        function message3(){
+        document.getElementById('message3').innerHTML = "Select your ticket."; 
+       }
+
+       function print_ticket(){
+        window.alert('Check your email for your ticket. Thank you!');
+       }
+
+        function info(){
+        var name = document.getElementById('name').value;
+        
+        window.alert('Thanks ' + name + '! Proceed to the next section.');
+      }
+      
+        function check_discount(){
+
+          var seat = document.getElementById('seat').value;
+          var disc = document.getElementById('discount').value;   
+          var final_rate = seat - (disc * seat) ;
+
+          window.alert('Your ticket price is ' + final_rate + '. Proceed to the next section.');
+        }
+      </script>
+
+      
+</body>
+</html>
